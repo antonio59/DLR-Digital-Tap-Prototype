@@ -4,7 +4,7 @@
 
 DLR Digital Tap is a prototype for a digital tap-in/tap-out system designed for the Docklands Light Railway (DLR) in London. This project aims to reduce queues at DLR stations by allowing users to digitally tap in and out using their mobile devices.
 
-<div style="padding:101.76% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1019170159?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="DLR Digital Tap"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+See it in action https://vimeo.com/1019170159?share=copy#t=0
 
 ## Features
 
