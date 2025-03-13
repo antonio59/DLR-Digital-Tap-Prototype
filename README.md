@@ -1,83 +1,95 @@
 # DLR Digital Tap
 
-## Overview
-
-DLR Digital Tap is a prototype for a digital tap-in/tap-out system designed for the Docklands Light Railway (DLR) in London. This project aims to reduce queues at DLR stations by allowing users to digitally tap in and out using their mobile devices.
-
-See it in action https://vimeo.com/1019170159?share=copy#t=0
+A digital solution for improving the DLR (Docklands Light Railway) travel experience in London. This prototype demonstrates a modern approach to tap-in/tap-out functionality with real-time station detection and community support features.
 
 ## Features
 
-- Digital tap-in and tap-out functionality
-- Station search with autocomplete
-- Simulated nearest station detection
-- Real-time status updates
-- Responsive design for mobile use
+- 🚉 Real-time nearest station detection
+- 🎫 Digital tap-in/tap-out functionality
+- 🔍 Smart station search with suggestions
+- 👍 Community support voting system
+- 📱 Mobile-responsive design
+- 🌐 Real-time data synchronization with Firebase
 
-## Technology Stack
+## Tech Stack
 
-- React
 - Next.js
 - TypeScript
+- Firebase (Firestore)
 - Tailwind CSS
-- shadcn/ui components
-- Lucide React icons
+- Shadcn/ui Components
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Firebase account
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-
-### Installation
-
 1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/dlr-digital-tap.git
-   ```
+```bash
+git clone https://github.com/yourusername/DLR-Digital-Tap-Prototype.git
+cd DLR-Digital-Tap-Prototype
+```
 
-2. Navigate to the project directory:
-   ```
-   cd dlr-digital-tap
-   ```
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-3. Install dependencies:
-   ```
-   npm install
-   ```
-   or
-   ```
-   yarn install
-   ```
+3. Set up Firebase:
+   - Create a new Firebase project
+   - Enable Firestore database
+   - Add a web app to your Firebase project
+   - Copy the Firebase configuration
 
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-   or
-   ```
-   yarn dev
-   ```
+4. Create a `.env.local` file in the root directory with your Firebase configuration:
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
 
-5. Open your browser and visit `http://localhost:3000`
+5. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Usage
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. When you open the app, you'll see a simulated "nearest station" alert.
-2. Use the search box to find your starting station for tap-in.
-3. Select a station from the autocomplete suggestions.
-4. Click the "Tap In" button to start your journey.
-5. To end your journey, use the search box again to find your destination station.
-6. Click the "Tap Out" button to complete your journey.
+## Project Structure
 
-## Future Enhancements
+```
+src/
+  ├── app/              # Next.js app directory
+  ├── components/       # React components
+  │   ├── dlr-digital-tap-client.tsx
+  │   └── SupportVote.tsx
+  ├── firebase/        # Firebase configuration
+  └── pages/           # Additional pages
+```
 
-- Integration with real geolocation services for accurate nearest station detection
-- Backend integration for real-time fare calculation
-- User authentication and account management
-- Integration with payment systems
-- Offline mode for areas with poor network coverage
+## Features in Detail
+
+### Digital Tap System
+- Smart station detection
+- Intuitive tap-in/tap-out interface
+- Station search with auto-suggestions
+- Journey tracking
+
+### Community Support System
+- Real-time vote counting
+- Share functionality
+- Local storage for vote persistence
+- Firebase integration for live updates
 
 ## Contributing
 
@@ -85,8 +97,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License.
-
-## Disclaimer
-
-This is a prototype and is not affiliated with or endorsed by Transport for London or the Docklands Light Railway. It is intended for demonstration purposes only.
+This project is licensed under the MIT License - see the LICENSE file for details.

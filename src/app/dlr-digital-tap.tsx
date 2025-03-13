@@ -1,6 +1,7 @@
 import { TrainIcon } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import DLRDigitalTapClient from './dlr-digital-tap-client'
+import SupportVote from './src/components/SupportVote'
 
 const dlrStations = [
   "Abbey Road", "All Saints", "Bank", "Beckton", "Beckton Park", "Blackwall",
@@ -26,6 +27,7 @@ export default function DLRDigitalTap() {
       </CardHeader>
       <CardContent className="space-y-4">
         <DLRDigitalTapClient stations={dlrStations} />
+        <SupportVote />
       </CardContent>
     </Card>
   )
